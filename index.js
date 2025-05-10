@@ -31,7 +31,6 @@ app.post("/api/submit", async (req, res) => {
   if (!name || !twitter || !email || chuts > 3) {
     return res.status(400).json({ message: "Validation failed" });
   }
-console.log(req)
   const ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
   const userAgent = req.headers['user-agent'];
 
